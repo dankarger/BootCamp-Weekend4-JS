@@ -51,3 +51,50 @@ function implimentForEach(data){
 
 //Test
 console.log('forEach: ',implimentForEach(data));
+
+//--------------------Extra-------------------------------------
+
+//filter:
+//return array of even numbers
+function extraFilter(data,kind) {
+    let numbersArray = data.numbers;
+    let result = [];
+    for(let i = 0; i < numbersArray.length; i++) {
+        if(kind === 'even') {
+            if (numbersArray[i] % 2 === 0) {
+                result.push(numbersArray[i]);
+            }
+        }
+        if(kind === 'odd') {
+            if (numbersArray[i] % 2 !== 0) {
+                result.push(numbersArray[i]);
+            }
+        }
+
+    }
+    return result;
+}
+console.log('Filter-Extra:' ,extraFilter(data,'even'));
+console.log('Filter-Extra:' ,extraFilter(data, 'odd'));
+
+//Map-Extra
+function extraMap(data) {
+    let numbers = data.numbers;
+    let result=[];
+    for(let i=0;i<numbers.length;i++) {
+        result.push(numbers[i]*2)
+    }
+    return result;
+}
+console.log('Extra-Map',extraMap(data))
+
+//Extra- forEach
+function extraForEach(data) {
+    let arrayOfstrings = data.strings;
+    let result = [];
+    for(let i=0;i<arrayOfstrings.length;i++) {
+        result.push(arrayOfstrings[i][0].toUpperCase()+arrayOfstrings[i].slice(1));
+    }
+    return result
+}
+console.log('Extra-forEach:' , extraForEach(data));
