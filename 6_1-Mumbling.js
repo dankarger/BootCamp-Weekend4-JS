@@ -9,6 +9,7 @@ function accum(str) {
     return result.join('-')
 }
 
+
 //Test:
 console.log(accum("abcd"));
 console.log(accum("RqaEzty"));
